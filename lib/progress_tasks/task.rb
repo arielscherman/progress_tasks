@@ -43,6 +43,7 @@ module ProgressTasks
     end
 
     def label
+      @goal.label
     end
   end
 end
