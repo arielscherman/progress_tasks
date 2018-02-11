@@ -1,12 +1,10 @@
 module ProgressTasks
   class Goal
     attr_reader   :number, :progress
-    attr_accessor :label
 
-    def initialize(number, params={})
+    def initialize(number)
       @number    = number
       @progress  = 0
-      @label     = params.fetch(:label, "Task")
 
       set_status # set as completed if goal is zero.
     end

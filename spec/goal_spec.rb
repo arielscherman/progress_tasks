@@ -5,17 +5,8 @@ RSpec.describe ProgressTasks::Goal do
 
   describe "initialize" do
     it "assignes values" do
-      goal = ProgressTasks::Goal.new(100, label: "Processing Foo")
-
       expect(goal.number).to   eq 100
       expect(goal.progress).to eq 0
-      expect(goal.label).to    eq "Processing Foo"
-    end
-
-    describe "default values" do
-      it "assignes defualt values for optional params" do
-        expect(goal.label).to eq "Task"
-      end
     end
 
     context "when goal is 0" do
